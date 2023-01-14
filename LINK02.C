@@ -1,0 +1,54 @@
+//LINKED LISTS 02(INSERTION OF NEW NODE AT THE BEGNING OF LINKED LIST)
+#include<stdio.h>
+#include<process.h>
+#include<malloc.h>
+struct node
+{
+int data;
+struct node *link;
+};
+void main()
+{
+struct node *first=NULL,*prev,*temp;
+int dat;
+system("cls");
+printf("ENTER ANY INTEGER VALUE OR -11 TO EXIT :");
+scanf("%d",&dat);
+while(dat!=-11)
+	{
+	temp=(struct node*) malloc(sizeof(struct node));
+	temp->data=dat;
+	temp->link=NULL;
+	if(first==NULL)
+	first=temp;
+	else
+	prev->link=temp;
+	prev=temp;
+	printf("ENTER ANY INTEGER VALUE OR -11 TO EXIT :");
+	scanf("%d",&dat);
+	}
+printf("START-->");
+temp=first;
+while(temp!=NULL)
+	{
+	printf("%d-->",temp->data);
+	temp=temp->link;
+	}
+printf("END\n");
+printf("ENTER THE VALUE TO INSERT IN THE LINKED LIST :");
+scanf("%d",&dat);
+temp=(struct node*) malloc(sizeof(struct node));
+temp->data=dat;
+temp->link=first;
+first=temp;
+temp=first;
+
+printf("START-->");
+while(temp!=NULL)
+	{
+	printf("%d-->",temp->data);
+	temp=temp->link;
+	}
+printf("END\n");
+system("pause");
+}

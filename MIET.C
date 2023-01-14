@@ -1,0 +1,368 @@
+#include<stdio.h>
+#include<process.h>
+void main()
+{
+char b;
+int a;
+float cel,fare,kel;
+menu:
+system("cls");
+textcolor(14);
+cprintf("------------------------------> SCALE CONVERTER<-------------------------\n");
+printf("\n\n\n");
+printf("           ==============================================\n");
+printf("           ||  1>    CELSIUS SCALE TO KELVIN SCALE     ||\n");
+printf("           ||  2>    CELSIUS SCALE TO FAHRENHEIT SCALE ||\n");
+printf("           ||  3>    FAHRENHEIT SCALE TO KELVIN SCALE  ||\n");
+printf("           ||  4>    FAHRENHEIT SCALE TO CELSIUS SCALE ||\n");
+printf("           ||  5>    KELVIN SCALE TO CELSIUS SCALE     ||\n");
+printf("           ||  6>    KELVIN SCALE TO FAHRENHEIT SCALE  ||\n");
+printf("           ||  7>    EXIT                              ||\n");
+printf("           ==============================================\n");
+printf("\n\n\n");
+textcolor(4);
+cprintf("                 ENTER YOUR CHOICE  ------>   ");
+scanf("%d",&a);
+system("cls");
+switch(a)
+{
+case 1: return2:
+	system("cls");
+	printf("\n\n");
+	textcolor(4);
+	cprintf("ENTER THE TEMPRATURE IN CELSIUS SCALE  :   ");
+	scanf("%f",&cel);
+	textcolor(14);
+	kel=cel+273.15;
+	printf("\n==============================================================\n");
+	printf("         THE TEMPRATURE AFTER CONVERSION IN KELVIN IS UNDER :\n");
+	printf("\n");
+	cprintf("                            ---> %.3f  DEGREE",kel);
+	printf("\n==============================================================");
+	printf("\n\n\n");
+	textcolor(1);
+	cprintf("FORMULA USED : K=C+273.15");
+	printf("\n\n");
+	system("pause");
+	textcolor(14);
+	printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+	cprintf("-->  ");
+	scanf("%c",&b);
+	if(b=='E'||b=='e')
+	  break;
+	else if(b=='B'||b=='b')
+	  goto menu;
+	else if(b=='R'||b=='r')
+	  goto return2;
+	else
+	{
+		textcolor(14);
+		cprintf("              ----> LAST CHANCE ");
+		printf("\n");
+		cprintf("                    ENTER VALID INPUT OR THE PROGRAMM WILL EXIT !!");
+		printf("\n");
+		system("pause");
+		textcolor(14);
+		printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+		cprintf("-->  ");
+		scanf("%c",&b);
+		if(b=='E'||b=='e')
+		  break;
+		else if(b=='B'||b=='b')
+		  goto menu;
+		else if(b=='R'||b=='r')
+		  goto return2;
+		else
+		  break;
+	}
+case 2: return1:
+	system("cls");
+	printf("\n\n");
+	textcolor(4);
+	cprintf("ENTER THE TEMPRATURE IN CELSIUS SCALE  :   ");
+	scanf("%f",&cel);
+	textcolor(14);
+	fare= cel*(1.8) +32;
+	printf("\n=================================================================\n");
+	printf("         THE TEMPRATURE AFTER CONVERSION IN FAHRENHEIT IS UNDER :\n");
+	printf("\n");
+	cprintf("                              --> %.3f  DEGREE",fare);
+	printf("\n=================================================================");
+	printf("\n\n\n");
+	textcolor(1);
+	cprintf("FORMULA USED : F = C x (9/5) + 32");
+	printf("\n\n");
+	system("pause");
+	textcolor(14);
+	printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+	cprintf("-->  ");
+	scanf("%c",&b);
+	if(b=='E'||b=='e')
+	  break;
+	else if(b=='B'||b=='b')
+	  goto menu;
+	else if(b=='R'||b=='r')
+	  goto return1;
+	else
+	{
+		textcolor(14);
+		cprintf("              ----> LAST CHANCE ");
+		printf("\n");
+		cprintf("                    ENTER VALID INPUT OR THE PROGRAMM WILL EXIT !!");
+		printf("\n");
+		system("pause");
+		textcolor(14);
+		printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+		cprintf("-->  ");
+		scanf("%c",&b);
+		if(b=='E'||b=='e')
+		  break;
+		else if(b=='B'||b=='b')
+		  goto menu;
+		else if(b=='R'||b=='r')
+		  goto return1;
+		else
+		  break;
+	}
+
+case 3: return3:
+	system("cls");
+	printf("\n\n");
+	textcolor(4);
+	cprintf("ENTER THE TEMPRATURE IN FAHRENHEIT SCALE  :   ");
+	scanf("%f",&fare);
+	textcolor(14);
+	kel= (fare-32)*(0.555555)+273.15;
+	printf("\n=================================================================\n");
+	printf("         THE TEMPRATURE AFTER CONVERSION IN KELVIN IS UNDER :\n");
+	printf("\n");
+	cprintf("                              --> %.3f  DEGREE",kel);
+	printf("\n=================================================================");
+	printf("\n\n\n");
+	textcolor(1);
+	cprintf("FORMULA USED : K= (F -32) x (5/9) +273.15");
+	printf("\n");
+	system("pause");
+	textcolor(14);
+	printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+	cprintf("-->  ");
+	scanf("%c",&b);
+	if(b=='E'||b=='e')
+	  break;
+	else if(b=='B'||b=='b')
+	  goto menu;
+	else if(b=='R'||b=='r')
+	  goto return3;
+	else
+	{
+		textcolor(14);
+		cprintf("              ----> LAST CHANCE ");
+		printf("\n");
+		cprintf("                    ENTER VALID INPUT OR THE PROGRAMM WILL EXIT !!");
+		printf("\n");
+		system("pause");
+		textcolor(14);
+		printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+		cprintf("-->  ");
+		scanf("%c",&b);
+		if(b=='E'||b=='e')
+		  break;
+		else if(b=='B'||b=='b')
+		  goto menu;
+		else if(b=='R'||b=='r')
+		  goto return3;
+		else
+		  break;
+	}
+case 4: return4:
+	system("cls");
+	printf("\n\n");
+	textcolor(4);
+	cprintf("ENTER THE TEMPRATURE IN FAHRENHEIT SCALE  :   ");
+	scanf("%f",&fare);
+	textcolor(14);
+	cel = (fare-32)*(0.555555);
+	printf("\n=================================================================\n");
+	printf("         THE TEMPRATURE AFTER CONVERSION IN CELSIUS IS UNDER :\n");
+	printf("\n");
+	cprintf("                              --> %.3f  DEGREE",cel);
+	printf("\n=================================================================");
+	printf("\n\n\n");
+	textcolor(1);
+	cprintf("FORMULA USED : K= (F -32) x (5/9) ");
+	printf("\n");
+	system("pause");
+	textcolor(14);
+	printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+	cprintf("-->  ");
+	scanf("%c",&b);
+	if(b=='E'||b=='e')
+	  break;
+	else if(b=='B'||b=='b')
+	  goto menu;
+	else if(b=='R'||b=='r')
+	  goto return4;
+	else
+	{
+		textcolor(14);
+		cprintf("              ----> LAST CHANCE ");
+		printf("\n");
+		cprintf("                    ENTER VALID INPUT OR THE PROGRAMM WILL EXIT !!");
+		printf("\n");
+		system("pause");
+		textcolor(14);
+		printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+		cprintf("-->  ");
+		scanf("%c",&b);
+		if(b=='E'||b=='e')
+		  break;
+		else if(b=='B'||b=='b')
+		  goto menu;
+		else if(b=='R'||b=='r')
+		  goto return4;
+		else
+		  break;
+	}
+case 5: return5:
+	system("cls");
+	printf("\n\n");
+	textcolor(4);
+	cprintf("ENTER THE TEMPRATURE IN KELVIN SCALE  :   ");
+	scanf("%f",&kel);
+	textcolor(14);
+	cel = kel -273.15;
+	printf("\n=================================================================\n");
+	printf("         THE TEMPRATURE AFTER CONVERSION IN CELSIUS IS UNDER :\n");
+	printf("\n");
+	cprintf("                              --> %.3f  DEGREE",cel);
+	printf("\n=================================================================");
+	printf("\n\n\n");
+	textcolor(1);
+	cprintf("FORMULA USED : C = K -273.15 ");
+	printf("\n");
+	system("pause");
+	textcolor(14);
+	printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+	cprintf("-->  ");
+	scanf("%c",&b);
+	if(b=='E'||b=='e')
+	  break;
+	else if(b=='B'||b=='b')
+	  goto menu;
+	else if(b=='R'||b=='r')
+	  goto return5;
+	else
+	{
+		textcolor(14);
+		cprintf("              ----> LAST CHANCE ");
+		printf("\n");
+		cprintf("                    ENTER VALID INPUT OR THE PROGRAMM WILL EXIT !!");
+		printf("\n");
+		system("pause");
+		textcolor(14);
+		printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+		cprintf("-->  ");
+		scanf("%c",&b);
+		if(b=='E'||b=='e')
+		  break;
+		else if(b=='B'||b=='b')
+		  goto menu;
+		else if(b=='R'||b=='r')
+		  goto return5;
+		else
+		  break;
+	}
+case 6: return6:
+	system("cls");
+	printf("\n\n");
+	textcolor(4);
+	cprintf("ENTER THE TEMPRATURE IN KELVIN SCALE  :   ");
+	scanf("%f",&kel);
+	textcolor(14);
+	fare = (kel - 273.15)*(1.8)+32;
+	printf("\n=================================================================\n");
+	printf("         THE TEMPRATURE AFTER CONVERSION IN FAHRENHEIT IS UNDER :\n");
+	printf("\n");
+	cprintf("                              --> %.3f  DEGREE",fare);
+	printf("\n=================================================================");
+	printf("\n\n\n");
+	textcolor(1);
+	cprintf("FORMULA USED : F = (K - 273.15) x (9/5) + 32");
+	printf("\n");
+	system("pause");
+	textcolor(14);
+	printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+	cprintf("-->  ");
+	scanf("%c",&b);
+	if(b=='E'||b=='e')
+	  break;
+	else if(b=='B'||b=='b')
+	  goto menu;
+	else if(b=='R'||b=='r')
+	  goto return6;
+	else
+	{
+		textcolor(14);
+		cprintf("              ----> LAST CHANCE ");
+		printf("\n");
+		cprintf("                    ENTER VALID INPUT OR THE PROGRAMM WILL EXIT !!");
+		printf("\n");
+		system("pause");
+		textcolor(14);
+		printf("\n                     ENTER 'E' TO EXIT\n                     ENTER 'R' TO AGAIN ENTER THE VALUE\n                     ENTER 'B' TO RETURN TO MAIN MENU\n");
+		cprintf("-->  ");
+		scanf("%c",&b);
+		if(b=='E'||b=='e')
+		  break;
+		else if(b=='B'||b=='b')
+		  goto menu;
+		else if(b=='R'||b=='r')
+		  goto return6;
+		else
+		  break;
+	}
+case 7 : break;
+
+default : system("cls");
+	  printf("MADE BY NAS-X");
+	  printf("\n\n\n\n");
+	  textcolor(14);
+	  cprintf("                  ENTER VALID CHOICE !!!");
+	  printf("\n\n\n\n");
+	  printf("ENTER E TO EXIT ");
+	  printf("\n\n\n\n");
+	  printf("ENTER M TO GO BACK TO MENU   ");
+	  printf("\n\n");
+	  cprintf("--->");
+	  scanf("%c",&b);
+	  if(b=='E'||b=='e')
+	    break;
+	  else if(b=='M'||b=='m')
+	    goto menu;
+	  else
+	  {
+		textcolor(14);
+		cprintf("              ----> LAST CHANCE ");
+		printf("\n");
+		cprintf("                    ENTER VALID INPUT OR THE PROGRAMM WILL EXIT !!");
+		printf("\n");
+		system("pause");
+		printf("ENTER E TO EXIT ");
+		printf("\n\n");
+		printf("ENTER M TO GO BACK TO MENU  ");
+		printf("\n\n");
+		cprintf("--->");
+		scanf("%c",&b);
+		if(b=='E'||b=='e')
+		  break;
+		else if(b=='M'||b=='m')
+		  goto menu;
+		else
+		  break;
+	  }
+
+
+
+
+}
+}
